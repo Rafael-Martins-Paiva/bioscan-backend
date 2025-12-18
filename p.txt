@@ -1,0 +1,3 @@
+~/bioscan-backend $ cat .env
+  GEMINI_API_KEY=AIza...
+  PORT=3333

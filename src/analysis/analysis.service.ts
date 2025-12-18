@@ -68,12 +68,13 @@ Be precise.
 
       return result;
     } catch (err) {
+      console.error('Error during Gemini analysis:', err);
       throw new InternalServerErrorException({
         isHuman: false,
         estimatedAge: '--',
         estimatedGender: '--',
         confidence: 0,
-        notes: 'Erro na análise',
+        notes: `Erro na análise: ${err.message || err}`,
         detectedFeatures: [],
       });
     }
